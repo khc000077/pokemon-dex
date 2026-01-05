@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 📘 포켓몬 도감 (Pokemon Dex)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PokeAPI를 활용하여 포켓몬의 기본 정보를 확인할 수 있는 웹 애플리케이션입니다.  
+포켓몬 목록 조회와 상세 페이지 이동을 통해 정보를 직관적으로 탐색할 수 있도록 구현했습니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 프로젝트 소개
 
-## React Compiler
+이 프로젝트는 외부 API를 활용한 데이터 기반 웹 서비스 구현을 목표로 합니다.  
+React와 TypeScript를 사용하여 컴포넌트 기반 UI 구성과 라우팅 흐름을 이해하고,  
+목록 페이지에서 상세 페이지로 이동하는 기본적인 서비스 구조를 구현했습니다.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚙️ 주요 기능
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 포켓몬 목록 조회
+- 포켓몬 클릭 시 상세 페이지 이동
+- 포켓몬 번호, 이름, 타입 정보 표시
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🧰 기술 스택 (Tech Stack)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Front-End
+- React
+- TypeScript
+- Vite
+- React Router
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### API
+- PokeAPI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🖥️ 서비스 화면
+
+### 메인 페이지
+- 포켓몬 목록을 번호 순서대로 표시
+- 각 포켓몬의 타입 정보 확인 가능
+
+### 상세 페이지
+- 선택한 포켓몬의 상세 정보 확인
+- 목록 페이지로 돌아가기 기능 제공
+
+---
+
+## 👤 팀 소개
+
+- 개인 프로젝트
+- Front-End 개발 및 UI 구현 전담
+
+
